@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin Creator</title>
+    <link rel="stylesheet" href="plugins.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Plugin Creator</h1>
+        <form id="pluginForm">
+            <div class="form-group">
+                <label for="pluginName">Plugin Name:</label>
+                <input type="text" id="pluginName" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="pluginDescription">Description:</label>
+                <textarea id="pluginDescription" name="description" required></textarea>
+            </div>
+            <h2>Variables</h2>
+            <div id="variablesContainer"></div>
+            <button type="button" id="addVariable">Add Variable</button>
+            <button type="submit">Create Plugin</button>
+        </form>
+    </div>
+    <script src="plugin-script.js"></script>
+</body>
+
+</html>
