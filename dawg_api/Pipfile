@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+beanie = "*"
+qrcode = {extras = ["pil"], version = "*"}
+fastapi-utils = "*"
+pydantic = {extras = ["email"], version = "*"}
+pytz = "*"
+aioredis = "*"
+gunicorn = "*"
+httpx = "*"
+
+[scripts]
+debug = "python -m uvicorn app:app --reload"
+
+[dev-packages]
+black = "*"
+isort = "*"
+
+[requires]
+python_version = "3.10"
