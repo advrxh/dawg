@@ -1,3 +1,5 @@
+const BACKEND_URL = "https://dawg-backend.onrender.com"
+
 document.addEventListener('DOMContentLoaded', () => {
     const userInput = document.getElementById('userInput');
     const enterButton = document.getElementById('enterButton');
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch initial list of cards
     const fetchInitialCards = async () => {
         try {
-            const response = await fetch('http://localhost:8000/plugins');
+            const response = await fetch(BACKEND_URL + '/plugins');
             const data = await response.json();
             return data;
         } catch (error) {
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Send user input and get percentage result
     const sendUserInput = async (input, cardId) => {
         try {
-            const response = await fetch(`http://localhost:8000/plugins/exec/${cardId}?prompt=${input}`, {
+            const response = await fetch(BACKEND_URL + `/plugins/exec/${cardId}?prompt=${input}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

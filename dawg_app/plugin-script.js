@@ -1,3 +1,5 @@
+const BACKEND_URL = "https://dawg-backend.onrender.com"
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('pluginForm');
     const addVariableButton = document.getElementById('addVariable');
@@ -129,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         try {
-            const response = await fetch('http://localhost:8000/plugins', {
+            const response = await fetch(BACKEND_URL + '/plugins', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
