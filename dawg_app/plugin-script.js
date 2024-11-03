@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://dawg-backend.onrender.com"
+const BACKEND_URL = "https://dawg-t2ik.onrender.com"
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('pluginForm');
